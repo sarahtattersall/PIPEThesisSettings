@@ -1,131 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <qaplugProfile>
-  <codingRulesProvider exportName="Checkstyle">
-    <module name="TreeWalker">
-      <property name="tabWidth" value="1" />
-      <module name="AnonInnerLength">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="ArrayTypeStyle">
-        <property name="severity" value="info" QAPlugSeverity="info" />
-      </module>
-      <module name="AvoidNestedBlocks">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="BooleanExpressionComplexity">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="ConstantName">
-        <property name="severity" value="info" QAPlugSeverity="info" />
-      </module>
-      <module name="CyclomaticComplexity">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-        <property name="max" value="12" />
-      </module>
-      <module name="DefaultComesLast">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="DesignForExtension">
-        <property name="severity" value="info" QAPlugSeverity="info" />
-      </module>
-      <module name="EmptyBlock">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="EmptyForInitializerPad">
-        <property name="severity" value="info" QAPlugSeverity="info" />
-      </module>
-      <module name="EmptyForIteratorPad">
-        <property name="severity" value="info" QAPlugSeverity="info" />
-      </module>
-      <module name="EmptyStatement">
-        <property name="severity" value="info" QAPlugSeverity="info" />
-      </module>
-      <module name="EqualsHashCode">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="FinalClass">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="HideUtilityClassConstructor">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="IllegalThrows">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="InnerAssignment">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="InnerTypeLast">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="InterfaceIsType">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="MagicNumber">
-        <property name="severity" value="info" QAPlugSeverity="info" />
-        <property name="ignoreHashCodeMethod" value="true" />
-        <property name="ignoreAnnotation" value="false" />
-      </module>
-      <module name="MemberName">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="MethodName">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="MethodParamPad">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="ModifierOrder">
-        <property name="severity" value="info" QAPlugSeverity="info" />
-      </module>
-      <module name="MultipleVariableDeclarations">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="MutableException">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="NeedBraces">
-        <property name="severity" value="info" QAPlugSeverity="info" />
-      </module>
-      <module name="NoClone">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="RedundantImport">
-        <property name="severity" value="info" QAPlugSeverity="info" />
-      </module>
-      <module name="RedundantModifier">
-        <property name="severity" value="info" QAPlugSeverity="info" />
-      </module>
-      <module name="SimplifyBooleanExpression">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="SimplifyBooleanReturn">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="StaticVariableName">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="StringLiteralEquality">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="TrailingComment">
-        <property name="severity" value="info" QAPlugSeverity="info" />
-      </module>
-      <module name="TypeName">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="TypecastParenPad">
-        <property name="severity" value="warning" QAPlugSeverity="major" />
-      </module>
-      <module name="UnnecessaryParentheses">
-        <property name="severity" value="info" QAPlugSeverity="info" />
-      </module>
-      <module name="UnusedImports">
-        <property name="severity" value="info" QAPlugSeverity="info" />
-        <property name="processJavadoc" value="false" />
-      </module>
-    </module>
-  </codingRulesProvider>
   <codingRulesProvider exportName="Hammurapi">
     <rules type="biz.hammurapi.review.ReviewRulesContainer">
       <rule type="biz.hammurapi.inspectors.java.AbstractMethodFromConstructorInspector">
@@ -1686,12 +1560,24 @@
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/codesize.xml/NcssMethodCount">
+      <properties>
+        <property name="minimum" value="100.0" />
+      </properties>
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/codesize.xml/NcssTypeCount">
+      <properties>
+        <property name="minimum" value="1500.0" />
+      </properties>
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/controversial.xml/AssignmentInOperand">
+      <properties>
+        <property name="allowFor" value="false" />
+        <property name="allowIf" value="false" />
+        <property name="allowIncrementDecrement" value="false" />
+        <property name="allowWhile" value="false" />
+      </properties>
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/controversial.xml/DefaultPackage">
@@ -1710,15 +1596,18 @@
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/coupling.xml/CouplingBetweenObjects">
-      <priority>3</priority>
-    </rule>
-    <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/coupling.xml/LooseCoupling">
+      <properties>
+        <property name="threshold" value="20" />
+      </properties>
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/design.xml/AssignmentToNonFinalStatic">
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/design.xml/AvoidDeeplyNestedIfStmts">
+      <properties>
+        <property name="problemDepth" value="3" />
+      </properties>
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/design.xml/AvoidInstanceofChecksInCatchClause">
@@ -1731,6 +1620,9 @@
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/design.xml/CloseResource">
+      <properties>
+        <property name="types" value="java.sql.Connection,java.sql.Statement,java.sql.ResultSet" />
+      </properties>
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/design.xml/CompareObjectsWithEquals">
@@ -1788,6 +1680,10 @@
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/design.xml/SingularField">
+      <properties>
+        <property name="disallowNotAssignment" value="false" />
+        <property name="checkInnerClasses" value="false" />
+      </properties>
       <priority>4</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/design.xml/SwitchStmtsShouldHaveDefault">
@@ -1800,6 +1696,9 @@
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/empty.xml/EmptyCatchBlock">
+      <properties>
+        <property name="allowCommentedBlocks" value="false" />
+      </properties>
       <priority>2</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/empty.xml/EmptyFinallyBlock">
@@ -1878,6 +1777,9 @@
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/naming.xml/BooleanGetMethodName">
+      <properties>
+        <property name="checkParameterizedMethods" value="false" />
+      </properties>
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/naming.xml/ClassNamingConventions">
@@ -1934,10 +1836,13 @@
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/strictexception.xml/ExceptionAsFlowControl">
       <priority>3</priority>
     </rule>
-    <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/strictexception.xml/SignatureDeclareThrowsException">
-      <priority>3</priority>
-    </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/strings.xml/AvoidDuplicateLiterals">
+      <properties>
+        <property name="maxDuplicateLiterals" value="4" />
+        <property name="skipAnnotations" value="false" />
+        <property name="minimumLength" value="3" />
+        <property name="separator" value="," />
+      </properties>
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/strings.xml/InefficientStringBuffering">
@@ -1971,6 +1876,9 @@
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/typeresolution.xml/SignatureDeclareThrowsException">
+      <properties>
+        <property name="IgnoreJUnitCompletely" value="false" />
+      </properties>
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/unnecessary.xml/UnnecessaryFinalModifier">
@@ -1983,9 +1891,15 @@
       <priority>2</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/unnecessary.xml/UselessOverridingMethod">
+      <properties>
+        <property name="ignoreAnnotations" value="false" />
+      </properties>
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/unusedcode.xml/UnusedFormalParameter">
+      <properties>
+        <property name="checkAll" value="false" />
+      </properties>
       <priority>3</priority>
     </rule>
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/unusedcode.xml/UnusedLocalVariable">
@@ -1997,6 +1911,129 @@
     <rule xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" ref="rulesets/java/unusedcode.xml/UnusedPrivateMethod">
       <priority>3</priority>
     </rule>
+  </codingRulesProvider>
+  <codingRulesProvider exportName="Checkstyle">
+    <module name="TreeWalker">
+      <property name="tabWidth" value="1" />
+      <module name="AnonInnerLength">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="ArrayTypeStyle">
+        <property name="severity" value="info" QAPlugSeverity="info" />
+      </module>
+      <module name="AvoidNestedBlocks">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="BooleanExpressionComplexity">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="ConstantName">
+        <property name="severity" value="info" QAPlugSeverity="info" />
+      </module>
+      <module name="CyclomaticComplexity">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+        <property name="max" value="12" />
+      </module>
+      <module name="DefaultComesLast">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="EmptyBlock">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="EmptyForInitializerPad">
+        <property name="severity" value="info" QAPlugSeverity="info" />
+      </module>
+      <module name="EmptyForIteratorPad">
+        <property name="severity" value="info" QAPlugSeverity="info" />
+      </module>
+      <module name="EmptyStatement">
+        <property name="severity" value="info" QAPlugSeverity="info" />
+      </module>
+      <module name="EqualsHashCode">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="FinalClass">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="HideUtilityClassConstructor">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="IllegalThrows">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="InnerAssignment">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="InnerTypeLast">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="InterfaceIsType">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="MagicNumber">
+        <property name="severity" value="info" QAPlugSeverity="info" />
+        <property name="ignoreHashCodeMethod" value="true" />
+        <property name="ignoreAnnotation" value="false" />
+      </module>
+      <module name="MemberName">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="MethodName">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="MethodParamPad">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="ModifierOrder">
+        <property name="severity" value="info" QAPlugSeverity="info" />
+      </module>
+      <module name="MultipleVariableDeclarations">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="MutableException">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="NeedBraces">
+        <property name="severity" value="info" QAPlugSeverity="info" />
+      </module>
+      <module name="NoClone">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="RedundantImport">
+        <property name="severity" value="info" QAPlugSeverity="info" />
+      </module>
+      <module name="RedundantModifier">
+        <property name="severity" value="info" QAPlugSeverity="info" />
+      </module>
+      <module name="SimplifyBooleanExpression">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="SimplifyBooleanReturn">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="StaticVariableName">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="StringLiteralEquality">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="TrailingComment">
+        <property name="severity" value="info" QAPlugSeverity="info" />
+      </module>
+      <module name="TypeName">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="TypecastParenPad">
+        <property name="severity" value="warning" QAPlugSeverity="major" />
+      </module>
+      <module name="UnnecessaryParentheses">
+        <property name="severity" value="info" QAPlugSeverity="info" />
+      </module>
+      <module name="UnusedImports">
+        <property name="severity" value="info" QAPlugSeverity="info" />
+        <property name="processJavadoc" value="false" />
+      </module>
+    </module>
   </codingRulesProvider>
 </qaplugProfile>
 
