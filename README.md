@@ -23,3 +23,9 @@ Results may be reproduced as follows:
 7. Press finish
 8. On the composition graph right click and select partition
 9. Tangle graph used in report will now appear
+
+## Metrics Reloaded ##
+1. Open the relevant project with IntelliJ
+2. Install the Metrics Reloaded plugin via Preferences - Plugins - Browse Repositores 
+3. Run the Javadoc metrics by via Analyze - Calculate Metrics and selecting Jacadoc coverage metrics as the metrics profile and project production files as the custom scope
+4. Click on the projects metrics tab for project percentages
