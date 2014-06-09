@@ -13,7 +13,7 @@ Results may be reproduced as follows:
 6. Hit OK and run results.
 
 
-## Stan4J ##
+## Stan4J tangle graph##
 1. Make jar using maven command line options.
 2. Open Stan4J.
 3. Select File - New.
@@ -23,6 +23,12 @@ Results may be reproduced as follows:
 7. Press finish.
 8. On the composition graph right click and select partition.
 9. Tangle graph used in report will now appear.
+
+## Stan4J tangle metric ##
+1. Load the relevant project jar in Stan4J.
+2. In the main window select the pollution graph and click on the tangled part in red.
+3. The percentage will appear at the bottom of the page.
+4. Note if there is no graph or no tangled setion this means the project has a 0% tangle rate.
 
 ## Metrics Reloaded ##
 1. Open the relevant project with IntelliJ.
