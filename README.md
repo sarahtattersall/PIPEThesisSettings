@@ -2,7 +2,7 @@
 
 This repository contains all the settings for reproducing the results described in my Masters project thesis.
 
-In Chapter 4 it analyses the PIPE 4 codebase and the specified commit has been tagged as architecture. In Chatper 9 it evaluates the changes to the code base and the commit has been tagged with evaluation in the PIPE 5 repositories.
+In Chapter 4 it analyses the PIPE 4 codebase and the specified commit has been tagged as `architecture`. In Chatper 9 it evaluates the changes to the code base and the commit has been tagged with `evaluation` in the PIPE 5 repositories.
 
 
 Results may be reproduced as follows:
